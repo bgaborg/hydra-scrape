@@ -1,0 +1,8 @@
+{
+    "data_sources": {
+        "source-1": "https://links.example.com/source-1.json",
+        "source-2": "https://links.example.com/source-2.json",
+        "source-3": "https://links.example.com/source-3.json",
+        "source-4": "https://links.example.com/source-4.json"
+    }
+}
