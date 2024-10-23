@@ -3,9 +3,10 @@ import os
 import requests
 import streamlit as st
 import pandas as pd
+import base64
 
 config = json.loads(open("config.json").read())
-data_sources = config["data_sources"]
+data_sources = {base64.a85decode(''.join([chr(ord(c) - 3) for c in key])).decode('utf-8'): base64.a85decode(''.join([chr(ord(c) - 3) for c in value])).decode('utf-8') for key, value in config["data_sources"].items()}
 
 def download_jsons(force = False):
     # show loading progress with progress bar
